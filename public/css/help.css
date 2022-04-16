@@ -1,0 +1,192 @@
+.faq {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: #0B2647;
+    color: rgb(230, 230, 230);
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    text-align: center;
+    height: 100vh;
+
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: .88rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: left;
+    background-color: #eef1f3
+}
+h1 {
+    color: #252525;
+    font-size: 3em;
+    line-height: normal;
+}
+h2 {
+    color: #353535;
+    font-size: 2em;
+    padding-bottom: 10px;
+    text-align: center;
+}
+h3 {
+font-size: 1.5em;
+margin-bottom: 0;
+}
+main {
+max-width: 520px;
+margin: 0 auto;
+}
+summary {
+font-size: 1.25rem;
+font-weight: 600;
+background-color: rgb(230, 230, 230);
+color: #333;
+padding: 1rem;
+margin-bottom: 1rem;
+outline: none;
+border-radius: 0.25rem;
+text-align: left;
+cursor: pointer;
+position: relative;
+}
+details[open] summary ~ * {
+animation: sweep .5s ease-in-out;
+}
+@keyframes sweep {
+0%    {opacity: 0; margin-top: -10px}
+100%  {opacity: 1; margin-top: 0px}
+}
+details > summary::after {
+position: absolute;
+content: "+";
+right: 20px;
+}
+details[open] > summary::after {
+position: absolute;
+content: "-";
+right: 20px;
+}
+details > summary::-webkit-details-marker {
+display: none;
+}
+
+
+
+/*********/
+#team,
+#coba {
+  background: #eeeeee;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 70px;
+}
+
+/* h6 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+} */
+.btn {
+    font-size: 0.8rem;
+    font-weight: 500;
+    outline: none !important;
+    position: relative;
+    transition: color 0.15s, background-color 0.15s, border-color 0.15s, box-shadow 0.15s
+}
+.btn-primary {
+    color: #fff;
+    background-color: #FBB667;
+    border-color: #FBB667;
+}
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+.rounded {
+    border-radius: 0.25rem!important;
+}
+.bg-white {
+    background-color: rgb(255, 255, 255)!important;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+.full {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+.text-right {
+    text-align: right!important;
+}
+.small, small {
+    font-size: 80%;
+    font-weight: 400;
+}
+.d-block {
+    display: block!important;
+}
+small {
+    font-size: 80%;
+}
+.text-muted {
+    color: #6c757d!important;
+}
+.pt-3, .py-3 {
+    padding-top: 0.5rem!important;
+}
+.media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.lh-125 {
+    line-height: 1.25;
+}
+.pb-3, .py-3 {
+    padding-bottom: 1rem!important;
+}
+.mb-0, .my-0 {
+    margin-bottom: 0!important;
+}
+.border-bottom {
+    border-bottom: 1px solid #dee2e6!important;
+}
+.media-body {
+    -ms-flex: 1;
+    flex: 1;
+}
+.small, small {
+    font-size: 80%;
+    font-weight: 400;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}

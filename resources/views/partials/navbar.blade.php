@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-nav-first">
                     <li><a href="/" class="smoothScroll">Home</a></li>
-                    <li><a href="/wisata" class="smoothScroll">Wisata</a></li>
+                    <li {{ Request::is('wisata*') ? 'active' : '' }}><a href="{{ route('wisata.index') }}" class="smoothScroll">Wisata</a></li>
                     <li><a href="/about" class="smoothScroll">About</a></li>
                     <li><a href="/help" class="smoothScroll">Help</a></li>
                 </ul>

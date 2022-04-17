@@ -16,6 +16,7 @@ class UserModel extends Model
     	'name',
     	'email',
     	'email_verified_at',
+        'no_hp',
     	'is_admin',
     	'password',
         'photo_user',

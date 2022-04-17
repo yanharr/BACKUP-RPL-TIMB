@@ -38,7 +38,7 @@
       <label for="status">Status</label>
       <select id="status" name="status" class="form-control" required>
         <option selected value="{{$data->status}}"></option>
-        <option>Accept</option>
+        <option>Accepted</option>
         
       </select>
   </div>

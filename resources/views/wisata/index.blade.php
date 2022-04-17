@@ -1,4 +1,4 @@
-@extends('templates.master')
+@extends('master')
 @section('title', 'Wisata')
 
 @section('content')

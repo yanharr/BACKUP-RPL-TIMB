@@ -21,7 +21,7 @@
     <link href="{{ asset('css/help.css') }}" rel="stylesheet">
     <link href="{{ asset('css/templatemo-style.css') }}" rel="stylesheet">
 
-    @yield('Desain1')
+    {{-- @yield('Desain1') --}}
 </head>
     <body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
         @include('partials.navbar')

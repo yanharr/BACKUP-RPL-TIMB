@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -48,14 +49,16 @@ class LoginController extends Controller
         ]);
 
         if (auth()->attempt(array('email' => $input['email'], 'password' => $input['password']))) {
-            if (auth()->user()->is_admin == 1) {
+            if (auth()->user()->is_admin == 0) {
+                return redirect()->route('landing.page');
+            }elseif(auth()->user()->is_admin == 1){
+                // return redirect()->route('relawan.index');
+            }elseif(auth()->user()->is_admin == 2){
                 return redirect()->route('admin.home');
-            } else {
-                return redirect()->route('home');
             }
         } else {
             return redirect()->route('login')
-                ->with('error', 'Email-Address And Password Are Wrong.');
+                ->with('error', 'Email Dan Password Salah');
         }
     }
 }

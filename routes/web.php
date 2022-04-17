@@ -4,6 +4,7 @@ use App\Http\Controllers\WisataController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardPostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,6 +56,26 @@ Route::get('/DeleteDataWisata/{id}', [WisataController::class, 'DeleteWisataData
 Auth::routes();
 Route::get('/', function () { return view('customer.home.index');});
 Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('landing.page');
+
+//rahma
+Route::resource('wisatas', DashboardPostsController::class);
+Route::get('/Mitra', [DashboardPostsController::class, 'index'])->name('mitra.home');
+
+Route::get('/TambahWisata',[DashboardPostsController::class, 'create']);
+Route::post('/TambahWisata',[DashboardPostsController::class, 'store']);
+
+Route::get('/dashboard',[DashboardPostsController::class, 'index']);
+Route::get('/Detail/{id}',[DashboardPostsController::class, 'show']);
+
+Route::get('/EditWisata/{id}', [DashboardPostsController::class, 'edit']);
+Route::patch('/EditWisata', [DashboardPostsController::class, 'update']);
+Route::get('/Delete/{id}', [DashboardPostsController::class, 'delete']);
+
+
+Route::resource('/dashboard', DashboardPostsController::class);
+
+
+
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
@@ -66,4 +87,6 @@ Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('la
 // Route::get('/admin/wisata/{wisata}/edit', [WisataController::class, 'edit']);
 // Route::post('/admin/wisata/{wisata}', [WisataController::class, 'update']);
 // Route::post('/admin/wisata/{wisata}/delete', [WisataController::class, 'destroy']);
+
+
 

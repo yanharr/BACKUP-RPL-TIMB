@@ -52,7 +52,7 @@ class LoginController extends Controller
             if (auth()->user()->is_admin == 0) {
                 return redirect()->route('landing.page');
             }elseif(auth()->user()->is_admin == 1){
-                // return redirect()->route('relawan.index');
+                return redirect()->route('mitra.home');
             }elseif(auth()->user()->is_admin == 2){
                 return redirect()->route('admin.home');
             }

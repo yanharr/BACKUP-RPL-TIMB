@@ -56,7 +56,7 @@
                 @foreach ($data as $wisata)
                 <div class="col-md-4 mb-3">
                     <div class="card" style="height: 100%">
-                        <img class="card-img-top" src="{{ asset('assets/images/'. $wisata->picture) }}"
+                        <img class="card-img-top" src="{{ asset('images/'. $wisata->picture) }}"
                             alt="tempat wisata" height="200" style="object-fit: cover">
                         <div class="card-body">
                             <h5 class="card-title">{{ $wisata->title }} </h5>

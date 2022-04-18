@@ -17,8 +17,8 @@
 </head>
 <body>
   
-  <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style="background-color:#7AC678;">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><img class="logo" src="https://drive.google.com/uc?export=view&id=1zsX29peLxMzYsdWqq9zcYBtmUTwXIv8n" width="100"></a>
+  <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style="background-color:#f7f7f7;">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><img class="logo" src="https://drive.google.com/uc?export=view&id=1zsX29peLxMzYsdWqq9zcYBtmUTwXIv8n" width="140"></a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -27,7 +27,7 @@
       <div class="nav-item text-nowrap">
         <form action="logout" method="post">
           @csrf
-          <button type="submit" class="nav-link px-3 border-0" style="background-color:#7AC678;color:blue;">Logout <span data-feather="log-out"></span></button>
+          <button type="submit" class="nav-link px-3 border-0" style="background-color:#f7f7f7;color:#7AC678;">Logout <span data-feather="log-out"></span></button>
 
         </form>
       </div>
@@ -36,7 +36,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background-color:#7AC678;">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background-color:#f7f7f7;">
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">

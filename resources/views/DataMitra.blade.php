@@ -27,7 +27,8 @@
                                     <td>{{$row->no_hp}}</td>
                                     <td>{{$row->email}}</td>
                                     
-                                    <td><a class="btn btn-sm btn-warning" href="{{url('/EditDataMitraUser/'.$row->id)}}">Update</a>   <a class="btn btn-sm btn-danger" href="{{url('/DeleteDataMitra/'.$row->id)}}">Delete</a></td>
+                                    <td><a class="btn btn-sm btn-warning" href="{{url('/EditDataMitraUser/'.$row->id)}}">Update</a>
+                                        <a class="btn btn-sm btn-danger" href="{{url('/DeleteDataMitra/'.$row->id)}}">Delete</a></td>
                                 </tr>
                                 @endforeach
                                

@@ -26,14 +26,14 @@ class CreateUsersSeeder extends Seeder
                 'name' => 'Caca Marica',
                 'email' => 'caca@gmail.com',
                 'is_admin' => '1',
-                'no_hp' => '085647945601',
+                'no_hp' => '0878787878',
                 'password' => bcrypt('123456'),
             ],
             [
                 'name' => 'Zeza Marica',
                 'email' => 'zeza@gmail.com',
                 'is_admin' => '0',
-                'no_hp' => '085647945601',
+                'no_hp' => '0823456',
                 'password' => bcrypt('123456'),
             ],
         ];

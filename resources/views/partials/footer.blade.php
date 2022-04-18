@@ -6,7 +6,7 @@
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="widget widegt_about">
 						<div class="widget_title">
-							<img src="images/logo.png" alt=""><br>
+							<img src="{{ asset('images/logo.png') }}" alt=""><br>
 						      <p>view anything can makes you feel better</p>
 						</div>
               				<!-- Footer Social Area-->

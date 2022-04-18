@@ -42,7 +42,7 @@
         <div class="sidebar pe-4 pb-3" >
             <nav class="navbar navbar-light">
                 <!-- <a href="index.html" class="navbar-brand mx-4 mb-3"> -->
-                <a class="navbar-brand" href="#"><img src="{{asset('images/logo.png')}}" alt="TelusurTasik" class="rounded mx-auto d-block"></a>
+                <a class="navbar-brand" href="{{ route('landing.page') }}"><img src="{{asset('images/logo.png')}}" alt="TelusurTasik" class="rounded mx-auto d-block"></a>
                     <!-- <h3 class="text-primary"><i class="fa fa-hashtag me-2"><img src="images/logo.png" alt=""></h3> -->
                 <!-- </a> -->
                 <div class="d-flex align-items-center ms-4 mb-4" style="margin-top:20px;">

@@ -2,10 +2,11 @@
 @section('title', 'Wisata')
 
 @section('content')
+<div class="container">
     <div class="py-3 px-5">
         <div class="row mb-5">
             <div class="col-md-6" style="text-align: center">
-                <img src="{{ asset('assets/images/'. $data->picture) }}" class="rounded img-fluid" alt="gambar wisata" />
+                <img src="{{ asset('images/'. $data->picture) }}" class="rounded img-fluid" alt="gambar wisata" width="500"/>
             </div>
             <div class="col-md-6">
                 <h4 class="font-weight-bold">{{ $data->title }}</h4>
@@ -37,7 +38,6 @@
                 <p class="text-muted">{{ $data->desc }}</p>
             </div>
         </div>
-
-        
     </div>
+</div>
 @endsection

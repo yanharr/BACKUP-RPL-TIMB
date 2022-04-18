@@ -21,7 +21,7 @@ class Wisata extends Seeder
                 'categorie' => 'Curug',
                 'location' => 'Cipatujah',
                 'desc'=> 'Curug Deng-deng adalah ...',
-                'status'=>'pending',
+                'status'=>'Pending',
                 'picture' => 'wisata1.jpg',
             ],
             [
@@ -30,7 +30,7 @@ class Wisata extends Seeder
                 'categorie' => 'Pegunungan',
                 'location' => 'Galunggung',
                 'desc'=> 'Viewdeck galunggung adalah ...',
-                'status'=>'pending',
+                'status'=>'Accepted',
                 'picture' => 'wisata5.jpg',
             ],
             [
@@ -39,7 +39,7 @@ class Wisata extends Seeder
                 'categorie' => 'Pantai',
                 'location' => 'Cimanuk,Kec Cikalong',
                 'desc'=> 'Pantai Karangtawulan adalah ...',
-                'status'=>'pending',
+                'status'=>'Pending',
                 'picture' => 'wisata2.jpg',
             ],
             [
@@ -48,7 +48,7 @@ class Wisata extends Seeder
                 'categorie' => 'Kawah',
                 'location' => 'Kadipaten',
                 'desc'=> 'Karaha Bodas adalah ...',
-                'status'=>'pending',
+                'status'=>'Pending',
                 'picture' => 'wisata6.jpg',
             ],
             [
@@ -59,6 +59,15 @@ class Wisata extends Seeder
                 'desc'=> 'Tonjong Canyon adalah ...',
                 'status'=>'Accepted',
                 'picture' => 'wisata4.jpg',
+            ],
+            [
+                'id_wisata'=>'6',
+                'title' => 'Curug Panetean',
+                'categorie' => 'Curug',
+                'location' => 'Pangilaran',
+                'desc'=> 'Curug Panetean adalah ...',
+                'status'=>'Pending',
+                'picture' => 'curugpanetean.jpg',
             ],
         ];
         // foreach ($wisata as $key => $value) {

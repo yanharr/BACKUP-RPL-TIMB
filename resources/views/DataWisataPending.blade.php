@@ -15,7 +15,8 @@
 			</div>
 	
 			<div class="card-footer">
-			<a href="{{url('/EditDataWisata/'.$row->id_wisata)}}" class="btn btn-warning col-md-12 text-center">Sunting</a>      <a href="{{url('/DeleteDataWisata/'.$row->id_wisata)}}" class="btn btn-danger col-md-12 text-center">Hapus</a>
+			<a href="{{url('/EditDataWisata/'.$row->id_wisata)}}" class="btn btn-warning col-md-12 text-center">Sunting</a>      
+			<a href="{{url('/DeleteDataWisata/'.$row->id_wisata)}}" class="btn btn-danger col-md-12 text-center">Hapus</a>
 			</div>
 		</div>
 	</div>

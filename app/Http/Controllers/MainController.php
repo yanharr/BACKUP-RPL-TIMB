@@ -13,6 +13,7 @@ class MainController extends Controller
     {
         $wisata = DB::table('wisatas')
             ->select('*')
+            ->where('status','=','Accepted')
             ->orderBy('wisatas.created_at', 'DESC')
             ->limit(5)
             ->get();

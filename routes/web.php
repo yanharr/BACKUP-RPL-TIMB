@@ -41,38 +41,35 @@ Route::get('/logout', function () {
 Route::get('/wisata/{wisata}/show', [WisataController::class, 'UserLookDetailWisata'])->name('wisata.show');
 Route::get('/wisata', [WisataController::class, 'UserLookWisata'])->name('wisata.index');
 
+#yanharr
 Route::get('/DataUser', [UserController::class, 'showUserData'])->name('admin.home')->middleware('is_admin');
-Route::get('/DataMitra', [UserController::class, 'showMitraData']);
-Route::get('/DataWisataPending', [WisataController::class, 'showWisataDataPending']);
-Route::get('/DataWisata', [WisataController::class, 'showWisataData']);
-Route::get('/EditDataMitraUser/{id}', [UserController::class, 'UpdateUserData']);
-Route::get('/EditDataWisata/{id}', [WisataController::class, 'UpdateWisataData']);
-Route::post('/DataUserUpdate', [UserController::class, 'EditUserData']);
-Route::post('/DataWisataUpdate', [WisataController::class, 'EditWisataData']);
-Route::get('/DeleteDataUser/{id}', [UserController::class, 'DeleteDataUser']);
-Route::get('/DeleteDataMitra/{id}', [UserController::class, 'DeleteDataMitra']);
-Route::get('/DeleteDataWisata/{id}', [WisataController::class, 'DeleteWisataData']);
+Route::get('/DataMitra', [UserController::class, 'showMitraData'])->middleware('is_admin');
+Route::get('/DataWisataPending', [WisataController::class, 'showWisataDataPending'])->middleware('is_admin');
+Route::get('/DataWisata', [WisataController::class, 'showWisataData'])->middleware('is_admin');
+Route::get('/EditDataMitraUser/{id}', [UserController::class, 'UpdateUserData'])->middleware('is_admin');
+Route::get('/EditDataWisata/{id}', [WisataController::class, 'UpdateWisataData'])->middleware('is_admin');
+Route::post('/DataUserUpdate', [UserController::class, 'EditUserData'])->middleware('is_admin');
+Route::post('/DataWisataUpdate', [WisataController::class, 'EditWisataData'])->middleware('is_admin');
+Route::get('/DeleteDataUser/{id}', [UserController::class, 'DeleteDataUser'])->middleware('is_admin');
+Route::get('/DeleteDataMitra/{id}', [UserController::class, 'DeleteDataMitra'])->middleware('is_admin');
+Route::get('/DeleteDataWisata/{id}', [WisataController::class, 'DeleteWisataData'])->middleware('is_admin');
 
+#cici landing page
 Auth::routes();
 Route::get('/', function () { return view('customer.home.index');});
 Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('landing.page');
 
 //rahma
-Route::resource('wisatas', DashboardPostsController::class);
-Route::get('/Mitra', [DashboardPostsController::class, 'index'])->name('mitra.home');
-
-Route::get('/TambahWisata',[DashboardPostsController::class, 'create']);
-Route::post('/TambahWisata',[DashboardPostsController::class, 'store']);
-
-Route::get('/dashboard',[DashboardPostsController::class, 'index']);
-Route::get('/Detail/{id}',[DashboardPostsController::class, 'show']);
-
-Route::get('/EditWisata/{id}', [DashboardPostsController::class, 'edit']);
-Route::patch('/EditWisata', [DashboardPostsController::class, 'update']);
-Route::get('/Delete/{id}', [DashboardPostsController::class, 'delete']);
-
-
-Route::resource('/dashboard', DashboardPostsController::class);
+Route::get('/Mitra', [DashboardPostsController::class, 'index'])->name('mitra.home')->middleware('is_mitra');
+Route::get('/TambahWisata',[DashboardPostsController::class, 'create'])->middleware('is_mitra');
+Route::post('/TambahWisata',[DashboardPostsController::class, 'store'])->middleware('is_mitra');
+Route::get('/dashboard',[DashboardPostsController::class, 'index'])->middleware('is_mitra');
+Route::get('/Detail/{id}',[DashboardPostsController::class, 'show'])->middleware('is_mitra');
+Route::get('/EditWisata/{id}', [DashboardPostsController::class, 'edit'])->middleware('is_mitra');
+Route::patch('/EditWisata', [DashboardPostsController::class, 'update'])->middleware('is_mitra');
+Route::get('/Delete/{id}', [DashboardPostsController::class, 'delete'])->middleware('is_mitra');
+Route::resource('/dashboard', DashboardPostsController::class)->middleware('is_mitra');
+Route::resource('wisatas', DashboardPostsController::class)->middleware('is_mitra');
 
 
 

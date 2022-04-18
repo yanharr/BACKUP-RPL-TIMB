@@ -156,9 +156,12 @@ active
                                                   <div class="courses-author">
                                                        <span></span>
                                                   </div>
+                                                  @guest
+                                                  @else
                                                   <div class="courses-price">
-                                                       <a href="/wisata"><span>Check Details</span></a>
+                                                       <a href="{{ route('wisata.show', $wisatas->id_wisata) }}"><span>Check Details</span></a>
                                                   </div>
+                                                  @endguest
                                              </div>
                                         </div>
                                    </div>

@@ -9,23 +9,10 @@ use Illuminate\Support\Facades\DB;
 
 class WisataController extends Controller
 {
-    // septi
-    // public function index(Request $request)
-    // {
-    //     $data['listWisata'] = Wisata::with(['reviews'])
-    //         ->when($request->has('searchWisata') && $request->searchWisata != null, function ($query) use ($request) {
-    //             $query->where('title', 'LIKE', '%' . $request->searchWisata . '%');
-    //         })->when($request->has('searchCategory') && $request->searchCategory != null, function ($query) use ($request) {
-    //             $query->where('categorie', $request->searchCategory);
-    //         })->paginate(3);
-
-    //     return view('wisata.index', $data);
-    // }
-    // public function __construct()
-    // {
-    //     $this->middleware('is_admin');
-    // }
-
+    public function __construct()
+    {
+        $this->middleware('auth');        
+    }
     public function show(Request $request, Wisata $wisata)
     {
         $data['wisata'] = $wisata->load(['reviews']);
